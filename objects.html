@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+        const product = {
+            name : 'socks',
+            price : 1000,
+            'arrival - time' : ' 3 days',
+
+            rating : {
+                stars : 3.5,
+                count : 50
+            },
+
+            fun : function func(){
+                console.log("Function inside an object.");
+            }
+        };
+        console.log(product);
+        console.log(product.name);
+
+        product.newprop = 'Parth';
+        console.log(product);
+
+        product.name = 'black';
+        console.log(product.name);
+
+        delete product.newprop;
+        console.log(product);
+
+        console.log(product['arrival - time']);
+        console.log(product.rating.stars);
+        product.fun();
+
+/*json model */
+        console.log(JSON.stringify(product));
+        const jsonString = JSON.stringify(product)
+        console.log(JSON.parse(jsonString));
+        
+    </script>
+</body>
+</html>

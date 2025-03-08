@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heads-Tails</title>
+</head>
+<body>
+    <script>
+        const randomNumber = Math.random();
+
+        let result = ''
+
+        if (randomNumber < 1/2) {
+            result = 'Heads'; 
+            console.log("Computer's move is Heads.");
+            
+        }else if (randomNumber >= 1/2) {
+            result = 'Tails';
+            console.log("Computer's move is Tails.");
+            
+        }
+
+        const guess = Math.random();
+        let computerMove = '';
+
+        if ( guess < 1/2) {
+            computerMove = 'Heads';
+        }else if ( guess >= 1/2) {
+            computerMove = 'Tails';
+        }
+
+        if( computerMove == result) {
+            console.log('Computer2 guessed it correctly');
+        } else if (computerMove != result) {
+            console.log('Computer2 guessed it wrong.');
+        }
+
+    </script>
+</body>
+</html>
